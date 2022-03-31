@@ -1,7 +1,4 @@
-.body-wrap{
-    display: flex;
-    flex: 3.5;
-    align-items: center;
-    justify-content: center;
-    background-color: coral;
+.Wrap{
+    /* display: flex; */
+    flex: 4;
 }

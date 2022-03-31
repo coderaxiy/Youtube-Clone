@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
+import { Outlet } from 'react-router-dom';
 import './body.css'
 
-const Body = () => {
+const Body = memo(() => {
   return (
-    <div className='body-wrap'>
-       <h1>Body Component</h1> 
-    </div>
+    <div className='Wrap'><Outlet /></div>
   )
-}
+});
 
-export default Body
+export default Body;

@@ -1,59 +1,46 @@
-
-.wrapper{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Pathway+Gothic+One&family=Roboto:wght@100;300;400&display=swap');
+.container{
+    margin-top: -10px;
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 23px 0 24px 0;
+    padding: 23px 10px 24px 0;
     background: #212121;
-    width: 18vw;
+    flex: 1;
+    height: 93vh;
+    overflow: scroll;
+    /* border: 1px solid gray; */
 }
 
-.logo-wrap{
+
+.linkWrap{
     display: flex;
     align-items: center;
-    padding-left: 27px;
-}
-
-.logo-wrap sup{
-    position: absolute;
-    bottom: 20px;
-    color: rgba(255, 255, 255, 0.6);
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 12px;
-}
-
-.logo{
-    margin-left: 27px;
-    position: relative;
-}
-
-.menu-wrap{
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    height: 80vh;
-}
-.link-wrap{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
+    margin-bottom: 22px;
     cursor: pointer;
-    padding-left: 27px;
+    padding-left: 35px;
+    text-decoration: none;
 }
 
 .link{
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
     line-height: 20px;
     color: #FFFFFF;
-    margin-left: 26px;
+    margin-left: 38px;
+    text-decoration: none;
 }
 .border{
     border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 20px;
+    opacity: .5;
+    margin-bottom: 15px;
+}
+
+.border1{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: .5;
+    margin-bottom: 15px;
+    /* margin-top: 15px; */
 }
 
 .title{
@@ -61,22 +48,40 @@
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     text-transform: uppercase;
-    font-weight: 500;
     font-size: 18px;
     line-height: 16px;
     margin: 12px 0 0 24px;
+    margin-bottom: 20px;
 }
 
-.user{
+.subscribed{
+    padding-left: 30px;
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    cursor: pointer;
-    padding-left: 27px;
+    color: white;
+    margin-bottom: 20px;
 }
 
-.drawer{
+.account_logo{
+    padding: 8px;
     display: flex;
-    flex-direction: column;
-    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.account_name{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+}
+
+.more_wrap{
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    cursor: pointer;
+    padding-left: 35px;
+    text-decoration: none;
 }

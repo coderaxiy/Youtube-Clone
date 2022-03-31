@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@100&display=swap');
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 10px 25px 10px 25px;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: #212121;
+}
+
+.Sidebar{
+    display: flex;
+}
+
+
+
+.logoWrap{
+    display: flex;
+    align-items: center;
+}
+
+.burgerIcon{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burgerIcon:active{
+    background-color: gray;
+}
+
+.logo{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5px;
+}
+
+.navWrap{
+    display: flex;
+    align-items: center;
+}
+
+.inputWrap{
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    /* flex: 1; */
+}
+input{
+    padding-left: 15px;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    border-radius: 2px 0px 0px 2px;
+    width: 45vw;
+    height: 3rem;
+    color: white;
+    font-size: 18px;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+.voiceSearch-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000000;
+    opacity: .6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.topBar{
+    margin: 0 20px 0 22px;
+}
+
+.bell-icon{
+    margin-right: 20px;
+}
+
+.account{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgb(35, 136, 35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+}

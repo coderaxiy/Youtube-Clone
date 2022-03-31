@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Pathway+Gothic+One&family=Roboto:wght@100;300;400&display=swap');
+
+.wrapper{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px 10px 0 12px;
+    background-color: #212121;
+    color: white;
+}
+
+.iconWrap{
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.Link{
+    color: white;
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}

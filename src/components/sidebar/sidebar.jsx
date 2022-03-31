@@ -1,136 +1,136 @@
-import React, { useState } from 'react'
+import React, { memo } from 'react'
 import './sidebar.css'
-import guide from '../../assets/icons/guide.svg'
-import logo from '../../assets/icons/Logo.svg'
-import home from '../../assets/icons/Home.fill.svg'
-import discover from '../../assets/icons/discover.svg'
-import subs from '../../assets/icons/subscriptions.svg'
-import shelf from '../../assets/icons/bookshelf.svg'
-import history from '../../assets/icons/past.svg'
-import yourvideos from '../../assets/icons/your-videos.svg'
-import watchlater from '../../assets/icons/watch-later.svg'
-import likevideos from '../../assets/icons/like-videos.svg'
-import downarrow from '../../assets/icons/downarrow.svg'
-import user from '../../assets/images/Profile-Photo.svg'
-import { Link, Outlet } from 'react-router-dom'
+import {AiFillHome} from 'react-icons/ai'
+import {MdOutlineExplore} from 'react-icons/md'
+import { Link } from 'react-router-dom'
+import {CgYoutube} from 'react-icons/cg'
+import {MdOutlineSubscriptions} from 'react-icons/md'
+import {MdOutlineVideoLibrary} from 'react-icons/md'
+import {VscHistory} from 'react-icons/vsc'
+import {RiVideoLine} from 'react-icons/ri'
+import {MdOutlineWatchLater} from 'react-icons/md'
+import {BiLike} from 'react-icons/bi'
+import {SiFreecodecamp} from 'react-icons/si'
+import {SiCoursera} from 'react-icons/si'
+import {AiOutlineYoutube} from 'react-icons/ai'
 
-const Sidebar = () => {
-  const [show, setShow] = useState(true)
-  const [footer, setFooter] = useState(true)
-  const [menu, setMenu] = useState(true)
+const  Sidebar  = memo(() => {
+
   return (
-    <div style={{display:'flex'}}>
-    <div className='wrapper'>
-        <div className='logo-wrap'>
-            <img onClick={() => setMenu (!menu)} src={guide} alt="" />
-            <div className='logo'>
-              <img  src={logo} alt="" /> <sup>TR</sup>
+    <div className='container'>
+        <Link to={'/'} className='linkWrap'>
+            <AiFillHome size={"1.8em"} color={'white'} />
+            <div className='link'>Home</div>
+        </Link>
+        <Link to={'/explore'} className='linkWrap'>
+            <MdOutlineExplore size={"1.8em"} color={'white'} />
+            <div className='link'>Explore</div>
+        </Link>
+        <Link to={'/shorts'} className='linkWrap'>
+            <CgYoutube size={"1.8em"} color={'white'} />
+            <div className='link'>Shorts</div>
+        </Link>
+        <Link to={'/subscriptions'} className='linkWrap'>
+            <MdOutlineSubscriptions size={"1.8em"} color={'white'} />
+            <div className='link'>Subscriptions</div>
+        </Link>
+        <div className='border'></div>
+        <Link to={'/Library'} className='linkWrap'>
+            <MdOutlineVideoLibrary size={"1.8em"} color={'white'} />
+            <div className='link'>Library</div>
+        </Link>
+        <Link to={'/history'} className='linkWrap'>
+            <VscHistory size={"1.8em"} fill={'white'} />
+            <div className='link'>History</div>
+        </Link>
+        <Link to={'/yourvideos'} className='linkWrap'>
+            <RiVideoLine size={"1.8em"} color={'white'} />
+            <div className='link'>Your videos</div>
+        </Link>
+        <Link to={'/watchlater'} className='linkWrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Watch later</div>
+        </Link>
+        <Link to={'/likedvideos'} className='linkWrap'>
+            <BiLike size={"1.8em"} color={'white'} />
+            <div className='link'>Liked videos</div>
+        </Link>
+        <div className='border'></div>
+        <div className="title">SUBSCRIPTIONS</div>
+        <div className="subscribed">
+            <div className='account_logo'>
+                <SiFreecodecamp size={"1.5em"} />
             </div>
+            <div className='account_name'>freeCodeCamp.org</div>
         </div>
-        <div className='menu-wrap'>
-            <Link to={'/home'} className='link-wrap'>
-                <img src={home} alt="" />
-               { menu?<div className='link'>Home</div>:null}
-            </Link>
-            <Link to={'/explore'} className='link-wrap'>
-                <img src={discover} alt="" />
-                <div className='link'>Explore</div>
-            </Link>
-            <Link to={'/subscription'} className='link-wrap'>
-                <img src={subs} alt="" />
-                <div className='link'>Subscriptions</div>
-            </Link>
-            <div className='border'/>
-            <Link to={'/bookshelf'} className='link-wrap'>
-                <img src={shelf} alt="" />
-                <div className='link'>Book Shelf</div>
-            </Link>
-            <Link to={'/history'} className='link-wrap'>
-                <img src={history} alt="" />
-                <div className='link'>History</div>
-            </Link>
-            <Link to={'/yourvideos'} className='link-wrap'>
-                <img src={yourvideos} alt="" />
-                <div className='link'>Your Videos</div>
-            </Link>
-            <Link to={'/watchlater'} className='link-wrap'>
-                <img src={watchlater} alt="" />
-                <div className='link'>Watch Later</div>
-            </Link>
-            <Link to={'/likedvideos'} className='link-wrap'>
-                <img src={likevideos} alt="" />
-                <div className='link'>Liked Videos</div>
-            </Link>
-            <div onClick={() => setShow (!show)} className='link-wrap'>
-                <img src={downarrow} alt="" />
-                <div className='link'>See More</div>
+        <div className="subscribed">
+            <div className='account_logo'>
+                <SiCoursera size={"1.5em"} color={'skyblue'} />
             </div>
-            <div className='border' />
-            {
-              show?
-                <div className='menu-wrap'>
-                    <div className='title'>Subscriptions</div>
-                    <div className='user'> 
-                        <div className='image-cover'>
-                            <img src={user} alt="" />
-                        </div>
-                        <div className='link'> The Game</div>
-                    </div>
-                    <div className='user'> 
-                        <div className='image-cover'>
-                            <img src={user} alt="" />
-                        </div>
-                        <div className='link'>Lean Yo</div>
-                    </div>
-                    <div className='user'> 
-                        <div className='image-cover'>
-                            <img src={user} alt="" />
-                        </div>
-                        <div className='link'>Code Buster</div>
-                    </div>
-                    <div className='user'> 
-                        <div className='image-cover'>
-                            <img src={user} alt="" />
-                        </div>
-                        <div className='link'>Web Developer</div>
-                    </div>
-                    <div className='user'> 
-                        <div className='image-cover'>
-                            <img src={user} alt="" />
-                        </div>
-                        <div className='link'>React Tutorial</div>
-                    </div>
-                    <div className='user'> 
-                        <div className='image-cover'>
-                            <img src={user} alt="" />
-                        </div>
-                        <div className='link'>Funny Coding</div>
-                    </div>
-                    <div onClick={() => setFooter (!footer)} className='user'> 
-                        <div className='image-cover'>
-                            <img src={downarrow} alt="" />
-                        </div>
-                        <div className='link'>See More</div>
-                    </div>
-                </div>
-              :null
-            }
-            <div className='border' />
-            {
-              footer?<div className='menu-wrap'>
-                    <div className='title'>More From You Tube</div>
-                    <div className='user'> 
-                        <div className='image-cover'>
-                            <img src={discover} alt="" />
-                        </div>
-                        <div className='link'>You Tube Premium</div>
-                    </div>
-        </div>:null}
-    </div>
-    </div>
-    <Outlet />
+            <div className='account_name'>Coursera.com</div>
+        </div>
+        <div className="subscribed">
+            <div className='account_logo'>
+                <SiFreecodecamp size={"1.5em"} />
+            </div>
+            <div className='account_name'>freeCodeCamp.org</div>
+        </div>
+        <div className="subscribed">
+            <div className='account_logo'>
+                <SiFreecodecamp size={"1.5em"} />
+            </div>
+            <div className='account_name'>freeCodeCamp.org</div>
+        </div>
+        <div className='border1'></div>
+        <div className="title">MORE FROM YOUTUBE</div>
+        <Link to={'/youtubepremium'} className='more_wrap'>
+            <AiOutlineYoutube size={"1.8em"} color={'white'} />
+            <div className='link'>YouTube Premium</div>
+        </Link>
+        <Link to={'/movies'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Movies</div>
+        </Link>
+        <Link to={'/gaming'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Gaming</div>
+        </Link>
+        <Link to={'/live'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Live</div>
+        </Link>
+        <Link to={'/learning'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Learning</div>
+        </Link>
+        <Link to={'/sports'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Sports</div>
+        </Link>
+        <div className="border1"></div>
+        <Link to={'/settings'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Settings</div>
+        </Link>
+        <Link to={'/reporthistory'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Report History</div>
+        </Link>
+        <Link to={'/help'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Help</div>
+        </Link>
+        <Link to={'/sendfeedback'} className='more_wrap'>
+            <MdOutlineWatchLater size={"1.8em"} color={'white'} />
+            <div className='link'>Send feedback</div>
+        </Link>
+        <div className="border1"></div>
+        <div className="side_footer">
+            <div className="text">About Press Copyright Contact us Creators Advertise Developers</div>
+            <div className="text">Terms Privacy Policy & Safety How YouTube works Test new features</div>    
+        </div>
     </div>
   )
-}
+});
 
 export default Sidebar;

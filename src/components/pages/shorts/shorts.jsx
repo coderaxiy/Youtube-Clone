@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Explore = () => {
+const Shorts = () => {
   return (
     <div style={{color:'white'}}>
-    <h1>Explore Component</h1>
+    <h1>Shorts Component</h1>
     </div>
   )
 }
 
-export default Explore;
+export default Shorts;

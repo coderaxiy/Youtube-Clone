@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Explore = () => {
+const Movies = () => {
   return (
     <div style={{color:'white'}}>
-    <h1>Explore Component</h1>
+    <h1>Movies Component</h1>
     </div>
   )
 }
 
-export default Explore;
+export default Movies;
